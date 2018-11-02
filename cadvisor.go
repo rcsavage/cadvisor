@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 package main
 
 import (
@@ -65,8 +66,6 @@ var (
 	// Metrics to be ignored.
 	// Tcp metrics are ignored by default.
 	ignoreMetrics metricSetValue = metricSetValue{container.MetricSet{
-		container.NetworkTcpUsageMetrics:  struct{}{},
-		container.NetworkUdpUsageMetrics:  struct{}{},
 		container.ProcessSchedulerMetrics: struct{}{},
 		container.ProcessMetrics:          struct{}{},
 	}}
@@ -75,8 +74,6 @@ var (
 	ignoreWhitelist = container.MetricSet{
 		container.DiskUsageMetrics:        struct{}{},
 		container.NetworkUsageMetrics:     struct{}{},
-		container.NetworkTcpUsageMetrics:  struct{}{},
-		container.NetworkUdpUsageMetrics:  struct{}{},
 		container.PerCpuUsageMetrics:      struct{}{},
 		container.ProcessSchedulerMetrics: struct{}{},
 		container.ProcessMetrics:          struct{}{},
